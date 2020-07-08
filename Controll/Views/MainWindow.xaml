@@ -1,0 +1,36 @@
+﻿<Window x:Class="Controll.MainWindow"
+        Loaded="Window_Loaded"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Controll"
+        mc:Ignorable="d"
+        Title="App" Height="750" Width="1200" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition > </RowDefinition>
+            <RowDefinition > </RowDefinition>
+            <RowDefinition Height="0.5*"> </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid   Grid.RowSpan="2" Margin="10" x:Name="dgTodoList" FontSize="16" AutoGenerateColumns="False" Grid.ColumnSpan="3">
+             <DataGrid.Columns>
+                 <DataGridTextColumn Header="FirstName" Width="180" Binding="{Binding FirstName}"/>
+                 <DataGridTextColumn Header="LastName" Width="180" Binding="{Binding LastName}" />
+                 <DataGridTextColumn Header="BirthDay" Width="180" Binding="{Binding BirthDay}" />
+                <DataGridTextColumn Header="Adress" Width="180" Binding="{Binding Adress}" />
+            </DataGrid.Columns>
+         </DataGrid>
+
+        <Button Content="Add Person" x:Name="AddPacient" 
+                Grid.Column="2" Grid.Row="2" Width="79" Height="45" Click="AddPerson"/>
+        <Button Content="Add Person2" x:Name="Form" 
+                Grid.Column="1" Grid.Row="2" Width="79" Height="45" Click="AddPerson2"/>
+    </Grid>
+</Window>
