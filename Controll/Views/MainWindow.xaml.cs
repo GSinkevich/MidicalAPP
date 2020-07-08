@@ -1,6 +1,5 @@
 ﻿using Controll.Model;
 using Controll.Services;
-using Controll.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -81,23 +80,7 @@ namespace Controll
             }
         }
 
-        private void AddPerson(object sender, RoutedEventArgs e)
-        {
-            var AddPersonPage = new AddPersonPage();
-            AddPersonPage.Show();
-           
-
-        }
-
-        private void AddPerson2(object sender, RoutedEventArgs e)
-        {
-
-            var AddPersonPage = new AddPersonPage();
-            var b = new TodoModel() 
-                { FirstName = AddPersonPage.EnterFirstName.Text};
-            _todoDataList.Add(b);
-
-        }
+        
     }
 }
 
